@@ -30,7 +30,7 @@ int main() {
         std::cout << "[1]: Enter Exe Name\n";
         std::cout << "[2]: Select Memory Adress\n";
         std::cout << "[3]: Set Memory Adress\n";
-        std::cout << "[4]: List Memory Adresses\n";
+        std::cout << "[4]: List Values\n";
         std::cout << "[5]: Clear All Values Used (May Cause Bugs)\n";
         std::cout << "[6]: List All Addresses of Current exe\n";
         std::cout << "\n";
@@ -68,7 +68,9 @@ int main() {
             std::cin.get();
         }
         else if (Option == "4") {
-            std::cout << "Not Currently Implemented.\n";
+            std:: cout << "Exe -> " << *PExe << "  Address -> " << PExe << "\n";
+            std::cout << "Mem Adress -> " << *PMem_Address << "  Address -> " << PMem_Address << "\n";
+            std::cout << "Mem Value -> " << *PMem_Value << "  Address -> " << PMem_Address << "\n";
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Please Press Enter.";
             std::cin.get();
