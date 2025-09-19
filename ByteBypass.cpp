@@ -34,6 +34,7 @@ int main() {
         std::cout << "[5]: Clear All Values Used (May Cause Bugs)\n";
         std::cout << "[6]: List All Addresses of Current exe\n";
         std::cout << "[Help]: Get helpfull quotes on how to use the program\n";
+        std::cout << "[Credits]: Get the credits on the program and its creator\n";
         std::cout << "\n";
 
         std::string Option;
@@ -118,10 +119,17 @@ int main() {
             std::cout << "Please Press Enter.";
             std::cin.get();
         }
+        else if (Option == "Credits") {
+            std::cout << "-- Made By Zach --\n";
+
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "\nPlease Press Enter.";
+            std::cin.get();
+        }
         else {
             std::cout << "ERROR. invalid option.\n";
             std::cout << "Reloading Options...";
-            std::this_thread::sleep_for(std::chrono::seconds(3));
+            std::this_thread::sleep_for(std::chrono::seconds(1));
         }
     }
 }
