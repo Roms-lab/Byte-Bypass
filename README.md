@@ -7,5 +7,8 @@ Small bug fixes, added Viewing all values currently being used & Their Memory Ad
 # Version 1.2
 Added checks when changing memory, for example you could set a memory value without having a memory address. That was assessed, and now you can enter -> Help into the program to have it display in detail what each function does.
 
+# Version 1.3
+Added Credits tab, SELF PROMOTION WOOOO!
+
 ## Building From Source
 Clone repository. Use GCC to compile and run the built exe.
