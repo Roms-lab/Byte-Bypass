@@ -6,7 +6,7 @@
 #include <limits>
 
 int main() {
-    
+
     // Set Values For Options
     std::string Mem_Value;
     std::string Exe;
@@ -33,6 +33,7 @@ int main() {
         std::cout << "[4]: List Values\n";
         std::cout << "[5]: Clear All Values Used (May Cause Bugs)\n";
         std::cout << "[6]: List All Addresses of Current exe\n";
+        std::cout << "[Help]: Get helpfull quotes on how to use the program\n";
         std::cout << "\n";
 
         std::string Option;
@@ -59,16 +60,21 @@ int main() {
             std::cin.get();
         }
         else if (Option == "3") {
-            std::cout << "Value -> ";
-            std::cin >> Mem_Value;
-            std::cout << "\nValue Set To -> {" << Mem_Value << "}\n";
-            std::cout << PMem_Value << "\n";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Please Press Enter.";
-            std::cin.get();
+            if (Mem_Address == "") {
+                std::cout << "Error. No Adress Selected.";
+            }
+            else {
+                std::cout << "Value -> ";
+                std::cin >> Mem_Value;
+                std::cout << "\nValue Set To -> {" << Mem_Value << "}\n";
+                std::cout << PMem_Value << "\n";
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "Please Press Enter.";
+                std::cin.get();
+            }
         }
         else if (Option == "4") {
-            std:: cout << "Exe -> " << *PExe << "  Address -> " << PExe << "\n";
+            std::cout << "Exe -> " << *PExe << "  Address -> " << PExe << "\n";
             std::cout << "Mem Adress -> " << *PMem_Address << "  Address -> " << PMem_Address << "\n";
             std::cout << "Mem Value -> " << *PMem_Value << "  Address -> " << PMem_Address << "\n";
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -99,11 +105,23 @@ int main() {
                 std::cin.get();
             }
         }
+        else if (Option == "Help") {
+            std::cout << "Option 1 -> Select the exe you want to modify.\n";
+            std::cout << "Option 2 -> Select a direct memory address to modify.\n";
+            std::cout << "Option 3 -> Set the value of a selected memory address.\n";
+            std::cout << "Option 4 -> Show the values and addresses of all used values.\n";
+            std::cout << "Option 5 -> Clear all currently used values.\n";
+            std::cout << "Option 6 -> Scan the memory of a selected exe.\n";
+            std::cout << "\n";
+
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Please Press Enter.";
+            std::cin.get();
+        }
         else {
             std::cout << "ERROR. invalid option.\n";
-            std::cout << "Aborting program to avoid further Errors...";
+            std::cout << "Reloading Options...";
             std::this_thread::sleep_for(std::chrono::seconds(3));
-                break;
         }
     }
 }
