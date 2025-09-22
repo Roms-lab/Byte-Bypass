@@ -102,6 +102,7 @@ int main() {
             else {
                 std::cout << "Scanning Memory...\n";
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::this_thread::sleep_for(std::chrono::seconds(1));
                 std::cout << "Please Press Enter.";
                 std::cin.get();
             }
@@ -127,9 +128,11 @@ int main() {
             std::cin.get();
         }
         else {
-            std::cout << "ERROR. invalid option.\n";
-            std::cout << "Reloading Options...";
-            std::this_thread::sleep_for(std::chrono::seconds(1));
+            std::cout << "Error: " << "\033[32m";
+            std::cout << "<invalid option.>\n";
+            std::cout << "\033[0m" << "\n";
+            std::this_thread::sleep_for(std::chrono::seconds(2));
+            system("cls");
         }
     }
 }
