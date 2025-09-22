@@ -18,6 +18,11 @@ void WaitMiliSeconds(int MiliSeconds) {
     std::this_thread::sleep_for(std::chrono::milliseconds(MiliSeconds));
 }
 
+void Pause() {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cout << "Please Press Enter.";
+}
+
 int main() {
 
     std::string Mem_Value;
@@ -58,8 +63,7 @@ int main() {
             std::cin >> Exe;
             std::cout << "\nExe Selected -> {" << Exe << "}\n";
             std::cout << PExe << "\n";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Please Press Enter.";
+            Pause();
             std::cin.get();
         }
         else if (Option == "2") {
@@ -67,8 +71,7 @@ int main() {
             std::cin >> Mem_Address;
             std::cout << "\nCurrent Adress Selected -> {" << Mem_Address << "}\n";
             std::cout << PMem_Address << "\n";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Please Press Enter.";
+            Pause();
             std::cin.get();
         }
         else if (Option == "3") {
@@ -80,8 +83,7 @@ int main() {
                 std::cin >> Mem_Value;
                 std::cout << "\nValue Set To -> {" << Mem_Value << "}\n";
                 std::cout << PMem_Value << "\n";
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "Please Press Enter.";
+                Pause();
                 std::cin.get();
             }
         }
@@ -89,8 +91,7 @@ int main() {
             std::cout << "Exe -> " << *PExe << "  Address -> " << PExe << "\n";
             std::cout << "Mem Adress -> " << *PMem_Address << "  Address -> " << PMem_Address << "\n";
             std::cout << "Mem Value -> " << *PMem_Value << "  Address -> " << PMem_Address << "\n";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Please Press Enter.";
+            Pause();
             std::cin.get();
         }
         else if (Option == "5") {
@@ -98,24 +99,21 @@ int main() {
             Mem_Address.clear();
             Mem_Value.clear();
             std::cout << "All Values Cleared.\n";
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Please Press Enter.";
+            Pause();
             std::cin.get();
 
         }
         else if (Option == "6") {
             if (Exe == "") {
                 std::cout << "Error. No Exe Selected.\n";
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::cout << "Please Press Enter.";
+                Pause();
                 std::cin.get();
             }
             else {
                 std::cout << "Scanning Memory...\n";
-                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
                 WaitSeconds(1);
                 ScanMemory();
-                std::cout << "Please Press Enter.";
+                Pause();
                 std::cin.get();
             }
         }
@@ -128,15 +126,13 @@ int main() {
             std::cout << "Option 6 -> Scan the memory of a selected exe.\n";
             std::cout << "\n";
 
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Please Press Enter.";
+            Pause();
             std::cin.get();
         }
         else if (Option == "Credits") {
             std::cout << "-- Made By Zach --\n";
 
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "\nPlease Press Enter.";
+            Pause();
             std::cin.get();
         }
         else {
