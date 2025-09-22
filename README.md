@@ -16,10 +16,10 @@ Fixed Error handling and added color to the Error type.
 
 # Platforms
 Windows 10/11 ✅
-Linux ❌ (Coming Soon)
-Mac OS ❌ (Coming Soon)
+Linux ❌ (Coming Soon) --> Before version 2.0
+Mac OS ❌ (Coming Soon) -> Will Take longer
 ARM Linux ❌
 ARM Windows ⚠️ (Untested)
 
-## Building From Source
+# Building From Source
 Clone repository. Use GCC to compile and run the built exe.
