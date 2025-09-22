@@ -1,25 +1,54 @@
-# Version 1.0
-Finished Frame of Project, Can set exe variable, Choose memory adresses, ect. Not much in version 1.0. More coming soon.
+# Byte-Bypass
 
-# Version 1.1
-Small bug fixes, added Viewing all values currently being used & Their Memory Addresses using raw pointers.
+A command-line tool for exploiting games and debugging applications by reading and modifying process memory on Windows. Byte-Bypass is for educational and security research purposes, helping to understand how game memory works and how vulnerabilities can be exploited.
 
-# Version 1.2
-Added checks when changing memory, for example you could set a memory value without having a memory address.
-That was assessed, and now you can enter -> Help into the program to have it display in detail what each function does.
+## Usage: Game Cheating and Debugging
 
-# Version 1.3
-Added Credits tab, SELF PROMOTION WOOOO!
+The primary purpose of Byte-Bypass is to assist in the following activities:
+*   **Game Exploitation**: Use the tool to find and modify values in a game's memory (such as health, currency, or resources) for cheating or research.
+*   **Debugging**: Inspect the memory addresses of applications to understand their internal state and debug issues.
 
-# Version 1.4
-Fixed Error handling and added color to the Error type.
+### Key features
+*   **Set Executable**: Target and attach to a specific process by setting an executable variable [1.0].
+*   **Choose Memory Addresses**: Select specific memory addresses to monitor and alter [1.0].
+*   **View Active Values**: Display all currently monitored memory addresses and their values using raw pointers [1.1].
+*   **Input Validation**: Prevent errors by checking for a valid memory address before attempting to change its value [1.2].
+*   **Interactive Help**: Type `-> Help` inside the program for a detailed explanation of each function [1.2].
+*   **Color-Coded Errors**: Receive clear, color-coded error messages for better debugging [1.4].
 
-# Platforms
-Windows 10/11 ✅
-Linux ❌ (Coming Soon)
-Mac OS ❌ (Coming Soon)
-ARM Linux ❌
-ARM Windows ⚠️ (Untested)
+## Supported Platforms
 
-# Building From Source
-Clone repository. Use GCC to compile and run the built exe.
+*   **Windows 10/11**: ✅
+*   **Linux**: ❌ (Coming Soon)
+*   **Mac OS**: ❌ (Coming Soon)
+*   **ARM Windows**: ⚠️ (Untested)
+*   **ARM Linux**: ❌
+
+## Building From Source
+
+To compile this tool, you will need the GCC compiler.
+1.  **Clone** the repository:
+    ```bash
+    git clone https://github.com/Roms-lab/Byte-Bypass.git
+    cd Byte-Bypass
+    ```
+2.  **Compile** the source code:
+    ```bash
+    gcc your_source_file.c -o Byte-Bypass.exe
+    ```
+3.  **Run** the compiled executable:
+    ```bash
+    ./Byte-Bypass.exe
+    ```
+
+## Changelog
+
+*   **Version 1.4**: Fixed error handling and added color to the Error type.
+*   **Version 1.3**: Added Credits tab. SELF PROMOTION WOOOO!
+*   **Version 1.2**: Added checks when changing memory. Now includes `-> Help` for detailed function descriptions.
+*   **Version 1.1**: Small bug fixes and added the ability to view all active memory addresses and values using raw pointers.
+*   **Version 1.0**: Finished basic frame of the project. Can set executable variable and choose memory addresses.
+
+## Credits
+
+**Author**: Zach / Roms-lab
