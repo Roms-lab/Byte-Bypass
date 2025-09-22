@@ -19,8 +19,9 @@ void WaitMiliSeconds(int MiliSeconds) {
 }
 
 void Pause() {
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    std::cout << "Please Press Enter.";
+    std::cout << "Please Press Enter." << std::endl;
+    std::cin.clear();
+    std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
 }
 
 int main() {
