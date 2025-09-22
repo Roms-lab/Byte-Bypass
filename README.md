@@ -44,11 +44,11 @@ To compile this tool, you will need the GCC compiler.
 
 ## Changelog
 
-*   **Version 1.4**: Fixed error handling and added color to the Error type.
-*   **Version 1.3**: Added Credits tab. SELF PROMOTION WOOOO!
-*   **Version 1.2**: Added checks when changing memory. Now includes `-> Help` for detailed function descriptions.
-*   **Version 1.1**: Small bug fixes and added the ability to view all active memory addresses and values using raw pointers.
 *   **Version 1.0**: Finished basic frame of the project. Can set executable variable and choose memory addresses.
+*   **Version 1.1**: Small bug fixes and added the ability to view all active memory addresses and values using raw pointers.
+*   **Version 1.2**: Added checks when changing memory. Now includes `-> Help` for detailed function descriptions.
+*   **Version 1.3**: Added Credits tab. SELF PROMOTION WOOOO!
+*   **Version 1.4**: Fixed error handling and added color to the Error type.
 
 ## Credits
 
