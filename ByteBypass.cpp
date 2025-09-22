@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -5,14 +6,24 @@
 #include <chrono>
 #include <limits>
 
+void ScanMemory() {
+
+}
+
+void WaitSeconds(int seconds) {
+    std::this_thread::sleep_for(std::chrono::seconds(seconds));
+}
+
+void WaitMiliSeconds(int MiliSeconds) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(MiliSeconds));
+}
+
 int main() {
 
-    // Set Values For Options
     std::string Mem_Value;
     std::string Exe;
     std::string Mem_Address;
 
-    // Set Points For Values Just In Case
     std::string* PMem_Value = &Mem_Value;
     std::string* PExe = &Exe;
     std::string* PMem_Address = &Mem_Address;
@@ -102,7 +113,8 @@ int main() {
             else {
                 std::cout << "Scanning Memory...\n";
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                WaitSeconds(1);
+                ScanMemory();
                 std::cout << "Please Press Enter.";
                 std::cin.get();
             }
@@ -131,7 +143,7 @@ int main() {
             std::cout << "Error: " << "\033[32m";
             std::cout << "<invalid option.>\n";
             std::cout << "\033[0m" << "\n";
-            std::this_thread::sleep_for(std::chrono::seconds(2));
+            WaitSeconds(2);
             system("cls");
         }
     }
