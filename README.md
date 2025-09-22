@@ -10,5 +10,8 @@ Added checks when changing memory, for example you could set a memory value with
 # Version 1.3
 Added Credits tab, SELF PROMOTION WOOOO!
 
+# Version 1.4
+Fixed Error handling and added color to the Error type.
+
 ## Building From Source
 Clone repository. Use GCC to compile and run the built exe.
