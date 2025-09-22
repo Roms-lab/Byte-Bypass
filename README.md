@@ -1,6 +1,7 @@
 # Byte-Bypass
 
-A command-line tool for exploiting games and debugging applications by reading and modifying process memory on Windows. Byte-Bypass is for educational and security research purposes, helping to understand how game memory works and how vulnerabilities can be exploited.
+A command-line tool for exploiting games and debugging applications by reading and modifying process memory.
+Byte-Bypass is for educational and security research purposes, helping to understand how game memory works and how vulnerabilities can be exploited.
 
 ## Usage: Game Cheating and Debugging
 
