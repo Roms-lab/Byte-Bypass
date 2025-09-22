@@ -51,6 +51,7 @@ To compile this tool, you will need the GCC compiler.
 *   **Version 1.4**: Fixed error handling and added color to the Error type.
 *   **Version 1.5**: Added WaitSeconds() and WaitMiliSeconds() for easier waiting so development will be easier.
 *   **Version 1.6**: Replaced long pause cmd every time needing to pause with Pause() Function.
+*   **Version 1.7**: Fixed compiler error with the Pause() function.
 
 ## Credits
 
