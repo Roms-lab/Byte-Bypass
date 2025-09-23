@@ -229,8 +229,7 @@ int main() {
             std::cout << "Option 3 -> Set the value of a selected memory address.\n";
             std::cout << "Option 4 -> Show the values and addresses of all used values.\n";
             std::cout << "Option 5 -> Clear all currently used values.\n";
-            std::cout << "Option 6 -> Scan the memory of a selected exe.\n";
-            std::cout << "Option 7 -> Scan the memory for a specific value.\n";
+            std::cout << "Option 6 -> Scan the memory for a specific value\n";
             std::cout << "\n";
 
             Pause();
@@ -251,3 +250,4 @@ int main() {
         }
     }
 }
+
